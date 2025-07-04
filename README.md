@@ -49,5 +49,5 @@ This command will build the Docker images and start both the backend and databas
 
 Access the Application:
 
-Backend: http://localhost:8000
+Backend (swaggerUI): http://localhost:8000/docs
 Database (if needed): http://localhost:5432
