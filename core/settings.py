@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "modules.shelf",
     "modules.cart",
     "modules.order",
+    "modules.user",
     "drf_yasg",
 ]
 
@@ -92,6 +93,13 @@ DATABASES = {
 }
 
 
+REST_FRAMEWORK = {
+    "DEFAULT_AUTHENTICATION_CLASSES": (
+        "rest_framework.authentication.BasicAuthentication",
+    ),
+    "DEFAULT_PERMISSION_CLASSES": ("rest_framework.permissions.IsAuthenticated",),
+}
+
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
 
@@ -109,6 +117,8 @@ AUTH_PASSWORD_VALIDATORS = [
         "NAME": "django.contrib.auth.password_validation.NumericPasswordValidator",
     },
 ]
+
+AUTH_USER_MODEL = "user.User"
 
 
 # Internationalization
@@ -133,4 +143,6 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-SWAGGER_SETTINGS = {"USE_SESSION_AUTH": False}
+SWAGGER_SETTINGS = {
+    "USE_SESSION_AUTH": False,
+}

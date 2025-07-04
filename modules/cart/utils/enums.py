@@ -3,5 +3,5 @@ from django.utils.translation import gettext_lazy as _
 
 
 class CartStatus(models.TextChoices):
-    CREATED = "CR", _("Created")
-    ORDERED = "OR", _("Ordered")
+    CREATED = "CREATED", _("Created")
+    ORDERED = "ORDERED", _("Ordered")

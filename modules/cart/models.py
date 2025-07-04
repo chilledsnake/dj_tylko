@@ -1,8 +1,8 @@
-from django.contrib.auth.models import User
 from django.db import models
 
 from modules.cart.utils.enums import CartStatus
 from modules.shelf.models import Shelf
+from modules.user.models import User
 
 
 class Cart(models.Model):
